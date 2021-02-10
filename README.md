@@ -1,11 +1,16 @@
 # Getting Started with App
 
-## Available Urls
+## Prerequisite
+Install Gradle
+
+## Setup
+Clone the project \
+Open the terminal \
+Browser to the project directory \
+Run the following command
 ### `./gradlew run`
 
-Runs the app in the development mode.\
-Open [http://localhost:8080](http://localhost:8080)
-
+### `Base Server URL : (http://localhost:8080)`
 
 ## Available API 
 
@@ -25,18 +30,15 @@ http://localhost:8080/product/type/cider
 
 A method to get the sort products by price and name, ascending or descending\
 
-## Name 
--
+-By Name: Defaults to asc order\
 http://localhost:8080/product/sort/name \
-Defaults to asc order
 
 http://localhost:8080/product/sort/name?order=asc \
 http://localhost:8080/product/sort/name?order=desc
 
-## Price
--
+-By Price: Defaults to asc order \
 http://localhost:8080/product/sort/price \
-Defaults to asc order
+
 
 http://localhost:8080/product/sort/price?order=asc \
 http://localhost:8080/product/sort/price?order=desc
