@@ -67,7 +67,7 @@ class ProductController {
     @Get(uri = "/sort/{type}{?order}", produces = MediaType.APPLICATION_JSON)
     def sort(@PathVariable String type, @Nullable String order) {
         HttpResponse response
-        if (!type) {
+        if (!type || (type && !["name", "price"].contains(type))) {
             response = HttpResponse.notFound()
         } else {
             def products = productService.sortProducts(type, order)
