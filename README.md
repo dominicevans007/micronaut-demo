@@ -12,7 +12,7 @@ Run the following command
 
 ### `Base Server URL : (http://localhost:8080)`
 
-## Available API 
+## Available API - GET REQUEST
 
 http://localhost:8080/product \
 Fetches all the Products from the Rest Api 
