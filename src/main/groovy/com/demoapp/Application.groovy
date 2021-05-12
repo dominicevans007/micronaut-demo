@@ -1,4 +1,4 @@
-package com.eebria
+package com.demoapp
 
 import io.micronaut.runtime.Micronaut
 import groovy.transform.CompileStatic

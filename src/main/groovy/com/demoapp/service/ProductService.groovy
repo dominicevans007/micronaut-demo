@@ -1,12 +1,10 @@
-package com.eebria.service
+package com.demoapp.service
 
-import com.eebria.domain.Product
-import groovy.transform.CompileStatic
+import com.demoapp.domain.Product
 
 import javax.inject.Singleton
 
 @Singleton
-@CompileStatic
 class ProductService {
     private final Product product = new Product()
 
@@ -15,7 +13,8 @@ class ProductService {
      * @param products
      * @return sets the products to the container
      */
-    def addProducts(List<Product> products) {
+    def addProducts(def products) {
+        println "-----------" + products
         if (!product.products) {
             product.products = products
         }
@@ -27,8 +26,8 @@ class ProductService {
      * @return list of products based on the type
      */
     def findByType(String type) {
-        return product.products.findAll({ Product product ->
-            product.style.toLowerCase() == type.toLowerCase()
+        return product.products.findAll({
+            it.name.toLowerCase() == type.toLowerCase()
         })
     }
 
@@ -39,6 +38,8 @@ class ProductService {
      */
     def findByPrice(String price) {
         def products
+        println "-----product.products------" + product.products
+
         if (price.toLowerCase() == "cheaper") {
             products = product.products.sort { +it.price }
         } else if (price.toLowerCase() == "expensive") {

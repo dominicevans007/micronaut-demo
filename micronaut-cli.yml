@@ -1,5 +1,5 @@
 applicationType: default
-defaultPackage: com.eebria
+defaultPackage: com.demoapp
 testFramework: junit
 sourceLanguage: groovy
 buildTool: gradle

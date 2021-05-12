@@ -1,15 +1,15 @@
-package com.eebria.service
+package com.demoapp.service
 
-import com.eebria.domain.Product
+import com.demoapp.domain.Product
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.client.annotation.Client;
 
-@Client("http://api.eebria.com/") 
+@Client("http://api.demo.com/")
 public interface ClientInterface {
 
     /**
-     * Fetches data from the Eebria Rest API
+     * Fetches data from the Rest API
      * @return a list of items
      */
     @Get(consumes = MediaType.APPLICATION_JSON)

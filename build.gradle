@@ -5,7 +5,7 @@ plugins {
 }
 
 version = "0.1"
-group = "com.eebria"
+group = "com.demoapp"
 
 repositories {
     mavenCentral()
@@ -17,7 +17,7 @@ micronaut {
     testRuntime("junit5")
     processing {
         incremental(true)
-        annotations("com.eebria.*")
+        annotations("com.demoapp.*")
     }
 }
 
@@ -30,13 +30,15 @@ dependencies {
     implementation("io.micronaut.groovy:micronaut-runtime-groovy")
     implementation("io.micronaut:micronaut-http-client")
 
+    annotationProcessor "io.micronaut.security:micronaut-security-annotations"
+
     runtime("io.micronaut:micronaut-core:2.3.1")
     runtimeOnly("ch.qos.logback:logback-classic")
 }
 
 
 application {
-    mainClass.set("com.eebria.Application")
+    mainClass.set("com.demoapp.Application")
 }
 
 java {
